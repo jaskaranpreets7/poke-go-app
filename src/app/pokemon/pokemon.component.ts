@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeService } from './poke.service';
 
+
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
@@ -13,7 +14,6 @@ export class PokemonComponent implements OnInit {
 
   ngOnInit() {
     this.poke = this.pokeservice.getData();
-    console.log(this.poke);
   }
 
 
