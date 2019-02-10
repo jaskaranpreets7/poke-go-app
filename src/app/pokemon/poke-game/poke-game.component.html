@@ -1,0 +1,31 @@
+<div>
+  <h4 class="text-center title">Let's Play the Poke-Game</h4>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="text-center"><h6><em><b>You</b></em></h6></div>
+      <div>
+          <label>Select your fav-poke : </label>&nbsp;
+          <select (change) = "selectedPoke($event.target.value)">
+              <option value="0"> --All-- </option>
+              <option *ngFor="let poke of pokemons;  index as i " id={{poke.id}} value={{poke.id}}>
+                {{poke.name.english}} 
+              </option>
+          </select>
+      </div>
+      <div *ngIf="showDetails && filterList[0]">
+          <h4>{{filterList[0].name.english}} Details: </h4>
+          <label>Type :</label> <em> {{filterList[0].type}}</em><br>
+          <label>Attack :</label> <em> {{filterList[0].base.Attack}}</em><br>
+          <label>Defense :</label> <em> {{filterList[0].base.Defense}}</em><br>
+          <label>HP :</label> <em> {{filterList[0].base.HP}}</em>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="text-center"><b>VS</b></div>
+    </div>
+    <div class="col-md-5">
+      <div class="text-center"><h6><em><b>Computer</b></em></h6></div>
+
+    </div>
+  </div>
+</div>
