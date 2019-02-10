@@ -1,0 +1,6 @@
+.container-fluid{
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: end !important;
+}
