@@ -8,7 +8,8 @@ import { PokeService } from '../poke.service';
 })
 export class PokeGameComponent implements OnInit {
   pokemons: any;
-  filterList = [];
+  filterList: any;
+  compList: any;
   showDetails: boolean ;
 
   constructor(private pokeservice: PokeService) { }
@@ -17,13 +18,22 @@ export class PokeGameComponent implements OnInit {
     this.pokemons = this.pokeservice.getData();
   }
 
-  selectedPoke(details: any) {
+  selectedPoke = (details: any) => {
+    if (details === '0' ) {
+      this.showDetails = false;
+    } else {
       this.showDetails = true;
-    console.log(typeof details);
       for (let i = 0; i < this.pokemons.length ; i++ ) {
-        if (this.pokemons[i].id == details) {
-          this.filterList.push(this.pokemons[i]);
+        if (this.pokemons[i].id === +details) {
+          this.filterList = this.pokemons[i];
         }
-      }console.log(this.filterList);
+      }
+    }
+    setTimeout(this.randomSelect(), 5000);
+  }
+
+  randomSelect = () => {
+    const randomNum = Math.floor(Math.random() * 20) + 1;
+    this.compList = this.pokemons[randomNum];
   }
 }
