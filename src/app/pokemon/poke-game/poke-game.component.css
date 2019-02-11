@@ -2,3 +2,17 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.comp{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 90px;
+}
+.vs{
+    padding-top:100px;
+}
+label {
+    font-family: cursive;
+    font-style: italic;
+    font-weight: 500;
+
+}
