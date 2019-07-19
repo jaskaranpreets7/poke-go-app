@@ -29,7 +29,7 @@ export class PokeGameComponent implements OnInit {
         }
       }
     }
-    setTimeout(this.randomSelect(), 5000);
+    setTimeout(this.randomSelect(), 3000);
   }
 
   randomSelect = () => {
