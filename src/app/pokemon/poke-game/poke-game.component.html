@@ -28,8 +28,10 @@
       
     </div>
     <div class="col-md-2">
-      <div class="text-center" *ngIf="!showDetails"><span><b>VS</b></span></div>
-      <div class="text-center" *ngIf="showDetails"><div class="vs"><b>VS</b></div></div>
+      <div class="text-center" *ngIf="!showDetails; else btn"><span><b>VS</b></span></div>
+      <ng-template #btn>
+        <div class="vs"><button>Let's Battle</button></div>
+      </ng-template>
     </div>
     <div class="col-md-5">
       <div class="text-center">
@@ -49,7 +51,9 @@
             </div>
         </div>
       </div>
-
     </div>
+  </div>
+  <div *ngIf="filterList && compList">
+    <app-playground [yourPoke]="filterList" [compPoke]="compList"></app-playground>
   </div>
 </div>
