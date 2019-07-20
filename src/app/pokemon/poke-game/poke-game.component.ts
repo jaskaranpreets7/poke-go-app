@@ -14,11 +14,11 @@ export class PokeGameComponent implements OnInit {
 
   constructor(private pokeservice: PokeService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.pokemons = this.pokeservice.getData();
   }
 
-  selectedPoke = (details: any) => {
+  selectedPoke(details: any): void {
     if (details === '0' ) {
       this.showDetails = false;
     } else {
@@ -29,11 +29,15 @@ export class PokeGameComponent implements OnInit {
         }
       }
     }
-    setTimeout(this.randomSelect(), 3000);
+    setTimeout(()=>{this.randomSelect()}, 1000);
   }
 
-  randomSelect = () => {
+  randomSelect(): void {
     const randomNum = Math.floor(Math.random() * 20) + 1;
     this.compList = this.pokemons[randomNum];
+  }
+
+  battle(): void{
+    this.showDetails = !this.showDetails;
   }
 }
