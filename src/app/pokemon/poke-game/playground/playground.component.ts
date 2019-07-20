@@ -6,18 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
-  @Input() yourPoke: any[];
-  @Input() compPoke: any[];
-  public player1HP: any; 
-  public player2HP: any; 
+  @Input() yourPoke: any;
+  @Input() compPoke: any;
+  public player1HP: any;
+  public player2HP: any;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.yourPoke,this.compPoke);
     this.player1HP = (Math.floor((this.yourPoke.base.HP/this.yourPoke.base.HP)*100));
     this.player2HP = (Math.floor((this.compPoke.base.HP/this.compPoke.base.HP) *100));
-    console.log('oninit',this.player2HP)
   }
 
   attack1= ()=>{
