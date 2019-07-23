@@ -1,82 +1,38 @@
+.wrapper{
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
 
-[class*='col-'] {
-    float: left;
-    padding-right: 20px;
-    padding-bottom: 20px;
-  }
-  [class*='col-']:last-of-type {
-    padding-right: 0;
-  }
-  *, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .grid {
-    margin: 0;
-  }
-  .col-1-2 {
-    width: 33%;
-  }
-  img{
-     width: 35%;
-     padding-top: 12%; 
-     margin-bottom: 15px;
-  }
- 
-  .grid-pad {
-    padding: 20px 10px;
-  }
-  .grid-pad > [class*='col-']:last-of-type {
-    padding-right: 20px;
-  }
-  
-  .flip-box {
-    background-color: transparent;
-    width: 300px;
-    height: 220px;
-    margin-left: 30px;
-    margin-bottom: 60px;
-    border: 0px solid transparent;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-box-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-box-back {
-    background-color: #bbb;
-    color: rgb(19, 18, 18);
-    transform: rotateY(180deg);
-    font-weight: bold;
-  }
-  .pokeDetail{
-      margin-top: 20px
-  }
+.wrapper > nav{
+  padding: 10px 0px 0px 0px;
+}
+
+h3{
+  padding: 20px 0px 20px 0px;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 500;
+}
+
+li > a {
+  color: black;
+}
+
+th{
+  font-size: 20px
+}
+
+td{
+  font-size: 17px;
+}
+
+#poke-img{
+  width: 85px;
+  height: 85px;
+}
+
+table{
+  box-shadow: 3px 5px rgb(109, 100, 100)
+}
