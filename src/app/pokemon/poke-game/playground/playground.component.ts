@@ -13,6 +13,7 @@ export class PlaygroundComponent implements OnInit {
   public player2HP: any;
   public compAtk: number;
   public youWon: boolean = false;
+  public compWon : boolean = false;
   public turn: boolean = false;
 
   public attacks = { 
@@ -37,8 +38,7 @@ export class PlaygroundComponent implements OnInit {
 
     if(this.player2HP  < 0 ){
       this.player2HP = 0;
-      this.youWon = true;
-      clearTimeout(timeout)
+      setTimeout(()=>{this.youWon = true;},700)      clearTimeout(timeout)
     }
     this.turn = !this.turn
   }
@@ -46,11 +46,11 @@ export class PlaygroundComponent implements OnInit {
   attack2():void{
     let attackPower = this.yourPoke.base.Attack - Math.floor((this.yourPoke.base.Attack/4));
     this.player2HP = this.player2HP - attackPower;
-    let timeout = setTimeout(()=>{this.computer() },1000);
+    let timeout = setTimeout(()=>{this.computer()},1000);
 
     if(this.player2HP  < 0 ){
       this.player2HP = 0;
-      this.youWon = !this.youWon;
+      setTimeout(()=>{this.youWon = true;},700)
       clearTimeout(timeout)
     }
     this.turn = !this.turn;
@@ -68,7 +68,7 @@ export class PlaygroundComponent implements OnInit {
     this.player1HP = this.player1HP - attackPower;
     if(this.player1HP  < 0 ){
       this.player1HP = 0;
-      this.youWon = false;
+      setTimeout(()=>{this.compWon = true;},700)
     }
 
   }
@@ -78,7 +78,7 @@ export class PlaygroundComponent implements OnInit {
     this.player1HP = this.player1HP - attackPower;
     if(this.player1HP  < 0 ){
       this.player1HP = 0;
-      this.youWon = false;
+      setTimeout(()=>{this.compWon = true;},700)
     }
 
   }
