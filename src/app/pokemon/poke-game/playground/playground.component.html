@@ -19,8 +19,9 @@
         <img id="p1" [src]="yourPoke.image">
       </div>
       <div class="btn-pos1">
-        <button class="btn btn-dark" (click)="attack1()">Attack1</button>
-        <button class="btn btn-dark" (click)="attack2()">Attack2</button>
+        <button class="btn btn-dark" (click)="attack1()" [disabled]="turn">Attack1</button>
+        &nbsp;
+        <button class="btn btn-dark" (click)="attack2()" [disabled]="turn">Attack2</button>
       </div>
     </div>
     <div class="col-md-6 col2-bg">
@@ -38,5 +39,8 @@
         <img id="p2" [src]="compPoke.image">
       </div>
     </div>
-  </div>
+  </div> 
 </div>
+
+
+
