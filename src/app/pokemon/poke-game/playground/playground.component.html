@@ -1,46 +1,51 @@
-<div class="container playground">
-  <div class="row ">
-    <div class="pokeball">
-      <div class="mid"></div>
-      <div class="ball"></div>
-    </div>
-    <div class="col-md-6 col1-bg">
-      <div class="player">
-        <h4>
-          <span>Name:</span> {{yourPoke.name.english}}
-        </h4>
-        <div>
-          <div class="progress">
-            <div class="progress-bar bg-success" [style.width]="player1HP + '%'"  role="progressbar" ></div>
+<div>
+  <div class="container playground" *ngIf="!youWon && !compWon">
+    <div class="row">
+      <div class="pokeball">
+        <div class="mid"></div>
+        <div class="ball"></div>
+      </div>
+      <div class="col-md-6 col1-bg">
+        <div class="player">
+          <h4>
+            <span>Name:</span> {{yourPoke.name.english}}
+          </h4>
+          <div>
+            <div class="progress">
+              <div class="progress-bar bg-success" [style.width]="player1HP + '%'" role="progressbar"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <img id="p1" [src]="yourPoke.image">
-      </div>
-      <div class="btn-pos1">
-        <button class="btn btn-dark" (click)="attack1()" [disabled]="turn">Attack1</button>
-        &nbsp;
-        <button class="btn btn-dark" (click)="attack2()" [disabled]="turn">Attack2</button>
-      </div>
-    </div>
-    <div class="col-md-6 col2-bg">
-      <div class="computer">
-        <h4 style="color: rgb(248, 47, 47)"> {{compPoke.name.english}}
-          <span> :Name</span>
-        </h4>
         <div>
-          <div class="progress">
-            <div class="progress-bar bg-danger"  [style.width]="player2HP + '%'"  role="progressbar"></div>
-          </div>
+          <img id="p1" [src]="yourPoke.image">
+        </div>
+        <div class="btn-pos1">
+          <button class="btn btn-dark" (click)="attack1()" [disabled]="turn">Attack1</button>
+          &nbsp;
+          <button class="btn btn-dark" (click)="attack2()" [disabled]="turn">Attack2</button>
         </div>
       </div>
-      <div>
-        <img id="p2" [src]="compPoke.image">
+      <div class="col-md-6 col2-bg">
+        <div class="computer">
+          <h4 style="color: rgb(248, 47, 47)"> {{compPoke.name.english}}
+            <span> :Name</span>
+          </h4>
+          <div>
+            <div class="progress">
+              <div class="progress-bar bg-danger" [style.width]="player2HP + '%'" role="progressbar"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img id="p2" [src]="compPoke.image">
+        </div>
       </div>
     </div>
-  </div> 
+  </div>
+  <div *ngIf="youWon">
+      <h4 style="color: black; text-align: center">Congralulation You won the game</h4>
+    </div>
+    <div *ngIf="compWon">
+      <h4 style="color: black;text-align: center">oh game over! computer won</h4>
+    </div>
 </div>
-
-
-
