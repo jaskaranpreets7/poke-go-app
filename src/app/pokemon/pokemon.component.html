@@ -1,23 +1,30 @@
-<div class="grid grid-pad">
-  <div class="flip-box col-1-2" *ngFor="let p of poke">
-    <div class="text-center card-header">
-      <h4><em>{{p.id}}</em></h4>
-    </div>
-    <div class="flip-box-inner">
-      <div class="flip-box-front">
-        <span><img [src]="p.image"></span>
-        <br>
-        <h6><label>Name :</label> <em> {{p.name.english}}</em></h6> 
-      </div>
-      <div class="flip-box-back">
-        <div class="pokeDetail">
-          <h4>Pokemon details: </h4>
-          <label>Type :</label> <em> {{p.type}}</em><br>
-          <label>Attack :</label> <em> {{p.base.Attack}}</em><br>
-          <label>Defense :</label> <em> {{p.base.Defense}}</em><br>
-          <label>HP :</label> <em> {{p.base.HP}}</em>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrapper" *ngIf="filterList || maxPages">
+  <h3 style="text-align: center">List Of Pokemon's</h3>
+  <table class="table table-hover table-dark ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Picture</th>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of filterList">
+        <th scope="row">{{p.id}}</th>
+        <td>
+          <img id="poke-img" [src]="p.image">
+        </td>
+        <td>{{p.name.english}}</td>
+        <td>{{p.type}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation">
+    <ul class="pagination pagination-lg justify-content-end">
+      <li class="page-item" *ngFor="let page of maxPages">
+        <a class="page-link" (click)="pokeList($event.target.innerText)">{{page}}</a>
+      </li>
+    </ul>
+  </nav>
 </div>
