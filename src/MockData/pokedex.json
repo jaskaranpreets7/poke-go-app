@@ -372,6 +372,186 @@
           "Speed": 97
         },
         "image" : "/assets/thumbnails/020Raticate.png"
+      },
+      {
+        "id": 21,
+        "name": {
+          "english": "Spearow"
+        },
+        "type": [
+          "Normal","Flying"
+        ],
+        "base": {
+          "HP": 40,
+          "Attack": 60,
+          "Defense": 30,
+          "Sp. Attack": 31,
+          "Sp. Defense": 31,
+          "Speed": 70
+        },
+        "image" : "/assets/thumbnails/021Spearow.png"
+      },
+      {
+        "id": 22,
+        "name": {
+          "english": "Fearow"
+        },
+        "type": [
+          "Normal", "Flying"
+        ],
+        "base": {
+          "HP": 65,
+          "Attack": 90,
+          "Defense": 65,
+          "Sp. Attack": 61,
+          "Sp. Defense": 61,
+          "Speed": 100
+        },
+        "image" : "/assets/thumbnails/022Fearow.png"
+      },
+      {
+        "id": 23,
+        "name": {
+          "english": "Ekans"
+        },
+        "type": [
+          "Poison"
+        ],
+        "base": {
+          "HP": 35,
+          "Attack": 60,
+          "Defense": 44,
+          "Sp. Attack": 40,
+          "Sp. Defense": 54,
+          "Speed": 55
+        },
+        "image" : "/assets/thumbnails/023Ekans.png"
+      },
+      {
+        "id": 24,
+        "name": {
+          "english": "Arbok"
+        },
+        "type": [
+          "Poison"
+        ],
+        "base": {
+          "HP": 60,
+          "Attack": 95,
+          "Defense": 69,
+          "Sp. Attack": 65,
+          "Sp. Defense": 79,
+          "Speed": 80
+        },
+        "image" : "/assets/thumbnails/024Arbok.png"
+      },
+      {
+        "id": 25,
+        "name": {
+          "english": "Pikachu"
+        },
+        "type": [
+          "Electric"
+        ],
+        "base": {
+          "HP": 35,
+          "Attack": 55,
+          "Defense": 40,
+          "Sp. Attack": 50,
+          "Sp. Defense": 50,
+          "Speed": 90
+        },
+        "image" : "/assets/thumbnails/025Pikachu.png"
+      },
+      {
+        "id": 26,
+        "name": {
+          "english": "Raichu"
+        },
+        "type": [
+          "Electric"
+        ],
+        "base": {
+          "HP": 60,
+          "Attack": 90,
+          "Defense": 55,
+          "Sp. Attack": 90,
+          "Sp. Defense": 80,
+          "Speed": 110
+        },
+        "image" : "/assets/thumbnails/026Raichu.png"
+      },
+      {
+        "id": 27,
+        "name": {
+          "english": "Sandshrew"
+        },
+        "type": [
+          "Ground"
+        ],
+        "base": {
+          "HP": 50,
+          "Attack": 75,
+          "Defense": 85,
+          "Sp. Attack": 20,
+          "Sp. Defense": 30,
+          "Speed": 40
+        },
+        "image" : "/assets/thumbnails/027Sandshrew.png"
+      },
+      {
+        "id": 28,
+        "name": {
+          "english": "Sandslash"
+        },
+        "type": [
+          "Ground"
+        ],
+        "base": {
+          "HP": 75,
+          "Attack": 100,
+          "Defense": 110,
+          "Sp. Attack": 45,
+          "Sp. Defense": 55,
+          "Speed": 65
+        },
+        "image" : "/assets/thumbnails/028Sandslash.png"
+      },
+      {
+        "id": 29,
+        "name": {
+          "english": "Nidoran"
+        },
+        "type": [
+          "Poison"
+        ],
+        "base": {
+          "HP": 55,
+          "Attack": 47,
+          "Defense": 52,
+          "Sp. Attack": 40,
+          "Sp. Defense": 40,
+          "Speed": 41
+        },
+        "image" : "/assets/thumbnails/029Nidoran.png"
+      },
+      {
+        "id": 30,
+        "name": {
+          "english": "Nidorina"
+        },
+        "type": [
+          "Poison"
+        ],
+        "base": {
+          "HP": 70,
+          "Attack": 62,
+          "Defense": 67,
+          "Sp. Attack": 55,
+          "Sp. Defense": 55,
+          "Speed": 56
+        },
+        "image" : "/assets/thumbnails/030Nidorina.png"
       }
     
 ]
