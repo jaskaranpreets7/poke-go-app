@@ -38,7 +38,8 @@ export class PlaygroundComponent implements OnInit {
 
     if(this.player2HP  < 0 ){
       this.player2HP = 0;
-      setTimeout(()=>{this.youWon = true;},700)      clearTimeout(timeout)
+      setTimeout(()=>{this.youWon = true;},700);  
+      clearTimeout(timeout)
     }
     this.turn = !this.turn
   }
@@ -50,7 +51,7 @@ export class PlaygroundComponent implements OnInit {
 
     if(this.player2HP  < 0 ){
       this.player2HP = 0;
-      setTimeout(()=>{this.youWon = true;},700)
+      setTimeout(()=>{this.youWon = true;},700);
       clearTimeout(timeout)
     }
     this.turn = !this.turn;

@@ -1,5 +1,5 @@
-<div>
-  <div class="container playground" *ngIf="!youWon && !compWon">
+
+  <div class="container-fluid playground" *ngIf="!youWon && !compWon">
     <div class="row">
       <div class="pokeball">
         <div class="mid"></div>
@@ -44,8 +44,7 @@
   </div>
   <div *ngIf="youWon">
       <h4 style="color: black; text-align: center">Congralulation You won the game</h4>
-    </div>
-    <div *ngIf="compWon">
+  </div>
+  <div *ngIf="compWon">
       <h4 style="color: black;text-align: center">oh game over! computer won</h4>
-    </div>
-</div>
+  </div>

@@ -1,58 +1,73 @@
 <div>
   <h4 class="text-center title">Let's Play the Poke-Game</h4>
-  <div class="row">
-    <div class="col-md-5">
-      <div class="text-center"><h6><em><b>You</b></em></h6>
-        <div>
-          <label>Choose your fav-poke : </label>&nbsp;
-          <select (change) = "selectedPoke($event.target.value)">
-              <option value="0"> --All-- </option>
-              <option *ngFor="let poke of pokemons;  index as i " id={{poke.id}} value={{poke.id}} >
-                {{poke.name.english}} 
-              </option>
-          </select>
-        </div>
-        <div *ngIf="showDetails && filterList" class="row">
-          <div class="col-sm-6 offset-sm-2">
-            <h4>{{filterList.name.english}} Details: </h4>
-            <label>Type :</label> <em> {{filterList.type}}</em><br>
-            <label>Attack :</label> <em> {{filterList.base.Attack}}</em><br>
-            <label>Defense :</label> <em> {{filterList.base.Defense}}</em><br>
-            <label>HP :</label> <em> {{filterList.base.HP}}</em>
-          </div>
-          <div class="col-sm-4 offset-sm-0">
-            <img [src] = "filterList.image">
+  <div class="dropdown text-center ">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Select your Pokemon
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right" role="menu" (click)="selectedPoke($event.target.value)">
+      <li class="dropdown-item" *ngFor="let poke of pokemons;  index as i" id={{poke.id}} value={{poke.id}}>
+        {{poke.name.english}}
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-5">
+        <div class="text-center">
+          <div *ngIf="showDetails && filterList" class="row">
+            <div class="col-md-5">
+              <h5> You choose : {{filterList.name.english}} </h5>
+              <label>Type :</label>
+              <em> {{filterList.type}}</em>
+              <br>
+              <label>Attack :</label>
+              <em> {{filterList.base.Attack}}</em>
+              <br>
+              <label>Defense :</label>
+              <em> {{filterList.base.Defense}}</em>
+              <br>
+              <label>HP :</label>
+              <em> {{filterList.base.HP}}</em>
+            </div>
+            <div class="col-md-5">
+              <img  [alt]="filterList.name.english" [src]="filterList.image">
+            </div>
           </div>
         </div>
       </div>
-      
-    </div>
-    <div class="col-md-2">
-      <div class="text-center" *ngIf="!showDetails; else btn"><span><b>VS</b></span></div>
-      <ng-template #btn>
-        <div class="vs"><button class="btn btn-dark btn-lg" (click)="battle()">Let's Battle</button></div>
-      </ng-template>
-    </div>
-    <div class="col-md-5">
-      <div class="text-center">
-        <h6><em><b>Computer</b></em></h6>
-        <div class="comp">
-            <div *ngIf="showDetails && compList" class="row">
-              <div class="col-sm-4 offset-sm-1">
-                  <img [src] = "compList.image">
-              </div>
-              <div class="col-sm-7">
-                <h4>{{compList.name.english}} Details: </h4>
-                <label>Type :</label> <em> {{compList.type}}</em><br>
-                <label>Attack :</label> <em> {{compList.base.Attack}}</em><br>
-                <label>Defense :</label> <em> {{compList.base.Defense}}</em><br>
-                <label>HP :</label> <em> {{compList.base.HP}}</em>
-              </div> 
+      <div class="col-md-2">
+        <div class="text-center" *ngIf="showDetails">
+          <div class="vs">
+            <button class="btn btn-dark btn-lg" (click)="battle()">Let's Battle</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="text-center" id="comp">
+          <div *ngIf="showDetails && compList" class="row">
+            <div class="col-md-5">
+              <img [alt]="compList.name.english" [src]="compList.image">
             </div>
+            <div class="col-md-5">
+              <h5> Computer choose : {{compList.name.english}} </h5>
+              <label>Type :</label>
+              <em> {{compList.type}}</em>
+              <br>
+              <label>Attack :</label>
+              <em> {{compList.base.Attack}}</em>
+              <br>
+              <label>Defense :</label>
+              <em> {{compList.base.Defense}}</em>
+              <br>
+              <label>HP :</label>
+              <em> {{compList.base.HP}}</em>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
   <div *ngIf="filterList && compList && !showDetails">
     <app-playground [yourPoke]="filterList" [compPoke]="compList"></app-playground>
   </div>

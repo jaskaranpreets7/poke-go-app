@@ -2,18 +2,32 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.comp{
-    padding-top: 30px;
-    padding-bottom: 20px;
-    padding-right: 90px;
-}
+
 .vs{
-    padding-top:100px;
+    padding-top:60px;
     text-align: center;
 }
-label {
+
+li{
+    display: inline-flex;
+    width: 195px;
     font-family: cursive;
     font-style: italic;
     font-weight: 500;
+    cursor: pointer;
+}
 
+img{
+    width: 140px
+}
+
+@media screen and (max-width:860px){
+    #comp{
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width:400px){
+    .table{
+        width: 375px
+    }
 }

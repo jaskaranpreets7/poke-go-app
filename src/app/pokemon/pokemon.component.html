@@ -1,6 +1,7 @@
 <div class="wrapper" *ngIf="filterList || maxPages">
   <h3 style="text-align: center">List Of Pokemon's</h3>
-  <table class="table table-hover table-dark ">
+  <div style="overflow-x:auto;">
+    <table class="table table-hover table-dark ">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -20,6 +21,8 @@
       </tr>
     </tbody>
   </table>
+  </div>
+  
   <nav aria-label="Page navigation">
     <ul class="pagination pagination-lg justify-content-end">
       <li class="page-item" *ngFor="let page of maxPages">
