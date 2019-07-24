@@ -4,11 +4,12 @@
     <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Select your Pokemon
       <span class="caret"></span>
     </button>
-    <ul class="dropdown-menu dropdown-menu-right" role="menu" (click)="selectedPoke($event.target.value)">
+    <ul class="dropdown-menu" role="menu" (click)="selectedPoke($event.target.value)">
       <li class="dropdown-item" *ngFor="let poke of pokemons;  index as i" id={{poke.id}} value={{poke.id}}>
         {{poke.name.english}}
       </li>
     </ul>
+
   </div>
   <div class="container-fluid">
     <div class="row" style="margin-top: 30px">
@@ -30,7 +31,7 @@
               <em> {{filterList.base.HP}}</em>
             </div>
             <div class="col-md-5">
-              <img  [alt]="filterList.name.english" [src]="filterList.image">
+              <img [alt]="filterList.name.english" [src]="filterList.image">
             </div>
           </div>
         </div>

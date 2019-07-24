@@ -8,9 +8,14 @@
     text-align: center;
 }
 
+ul{
+    margin: 10px 0px 0px 0px;
+    max-height: 550px;
+    overflow-y:auto; 
+}
 li{
-    display: inline-flex;
-    width: 195px;
+   
+    width: 196px;
     font-family: cursive;
     font-style: italic;
     font-weight: 500;
