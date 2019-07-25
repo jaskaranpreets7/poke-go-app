@@ -2,7 +2,6 @@
   <h4 class="text-center title">Let's Play the Poke-Game</h4>
   <div class="dropdown text-center ">
     <button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Select your Pokemon
-      <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu" (click)="selectedPoke($event.target.value)">
       <li class="dropdown-item" *ngFor="let poke of pokemons;  index as i" id={{poke.id}} value={{poke.id}}>
