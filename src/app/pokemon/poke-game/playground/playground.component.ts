@@ -5,35 +5,69 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.css'],
-  // animations:[
-  //   trigger('imgShake', [
-  //     state('normal' , style({
-  //       'transform':'scale(1)',
-  //     })),
-  //     state('shakeend', style({
-  //       transform: 'scale(1)',
-  //       backgroundColor:'red'
-  //     })),
-  //     transition('* <=> shakeend', animate('6000s ease-out', keyframes([
-  //       style({transform: 'translate3d(-1px, 0, 0)', offset: 0.1}),
-  //       style({transform: 'translate3d(2px, 0, 0)', offset: 0.2}),
-  //       style({transform: 'translate3d(-4px, 0, 0)', offset: 0.3}),
-  //       style({transform: 'translate3d(4px, 0, 0)', offset: 0.4}),
-  //       style({transform: 'translate3d(-4px, 0, 0)', offset: 0.5}),
-  //       style({transform: 'translate3d(4px, 0, 0)', offset: 0.6}),
-  //       style({transform: 'translate3d(-4px, 0, 0)', offset: 0.7}),
-  //       style({transform: 'translate3d(2px, 0, 0)', offset: 0.8}),
-  //       style({transform: 'translate3d(-1px, 0, 0)', offset: 0.9}),
-  //     ])))
-  //   ])
-  // ]
+  animations:[
+    trigger('imgShake', [
+      state('shakestart' , style({
+        transform:'scale(1)',
+      })),
+      state('shakeend', style({
+        transform: 'scale(1)',
+      })),
+      transition('shakestart <=> shakeend', animate('1000ms ease-out', keyframes([
+        style({transform: 'translate3d(-1px, 0, 0)', offset: 0.1}),
+        style({transform: 'translate3d(2px, 0, 0)', offset: 0.2}),
+        style({transform: 'translate3d(-4px, 0, 0)', offset: 0.3}),
+        style({transform: 'translate3d(4px, 0, 0)', offset: 0.4}),
+        style({transform: 'translate3d(-4px, 0, 0)', offset: 0.5}),
+        style({transform: 'translate3d(4px, 0, 0)', offset: 0.6}),
+        style({transform: 'translate3d(-4px, 0, 0)', offset: 0.7}),
+        style({transform: 'translate3d(2px, 0, 0)', offset: 0.8}),
+        style({transform: 'translate3d(-1px, 0, 0)', offset: 0.9}),
+      ])))
+    ]),
+    trigger('imgShake1', [
+      state('shakestart' , style({
+        transform:'scale(1)',
+      })),
+      state('shakeend', style({
+        transform: 'scale(1)',
+      })),
+      transition('shakestart <=> shakeend', animate('1000ms ease-out', keyframes([
+        style({transform: 'translate3d(-1px, 0, 0)', offset: 0.1}),
+        style({transform: 'translate3d(2px, 0, 0)', offset: 0.2}),
+        style({transform: 'translate3d(-4px, 0, 0)', offset: 0.3}),
+        style({transform: 'translate3d(4px, 0, 0)', offset: 0.4}),
+        style({transform: 'translate3d(-4px, 0, 0)', offset: 0.5}),
+        style({transform: 'translate3d(4px, 0, 0)', offset: 0.6}),
+        style({transform: 'translate3d(-4px, 0, 0)', offset: 0.7}),
+        style({transform: 'translate3d(2px, 0, 0)', offset: 0.8}),
+        style({transform: 'translate3d(-1px, 0, 0)', offset: 0.9}),
+      ])))
+    ]),
+    trigger('playground',[
+      state('void',style({
+        opacity:0,
+      })),
+      transition('* <=> void', animate('1250ms ease-out')),
+    ]),
+    trigger('text', [
+      state('flyIn', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.3s 2000ms ease-in')
+      ]),
+      transition(':leave', [
+        animate('0.2s ease-out', style({ transform: 'translateX(100%)' }))
+      ])
+    ])
+  ]
 })
 export class PlaygroundComponent implements OnInit {
 
   @Input() yourPoke: any;
   @Input() compPoke: any;
 
-  public state: string = 'normal';
+  public states = {};
   public player1HP: any;
   public player2HP: any;
   public compAtk: number;
@@ -49,23 +83,21 @@ export class PlaygroundComponent implements OnInit {
       self.compAttack2()
     }
   }
-  constructor() { }
+  constructor() {
+    this.states['state1'] = 'shakestart';
+    this.states['state2'] = 'shakestart';
+   }
 
   ngOnInit() {
     this.player1HP = (Math.floor((this.yourPoke.base.HP/this.yourPoke.base.HP)*100));
     this.player2HP = (Math.floor((this.compPoke.base.HP/this.compPoke.base.HP)*100));
   }
 
-  attack1(state:string):void{
+  attack1(newState):void{
     let attackPower = Math.floor((this.yourPoke.base.Attack/4));
     this.player2HP = this.player2HP - attackPower;
     let timeout = setTimeout(()=>{this.computer() },1000);
-
-    this.state = state;
-    this.state === 'normal' ? this.state = 'shakeend' : this.state = 'normal';
-    this.state === 'shakeend' ? this.state = 'shakeend' : this.state = 'normal';
-
-
+    this.states[newState] = (this.states[newState] === 'shakestart' ?  'shakeend' :  'shakestart');
     if(this.player2HP  < 0 ){
       this.player2HP = 0;
       setTimeout(()=>{this.youWon = true;},700);  
@@ -75,19 +107,17 @@ export class PlaygroundComponent implements OnInit {
 
   }
 
-  attack2(state:string):void{
+  attack2(newState):void{
     let attackPower = this.yourPoke.base.Attack - Math.floor((this.yourPoke.base.Attack/4));
     this.player2HP = this.player2HP - attackPower;
     let timeout = setTimeout(()=>{this.computer()},1000);
-    this.state === 'normal' ? this.state = 'shakeend' : this.state = 'normal';
-
+    this.states[newState] = (this.states[newState] === 'shakestart' ? 'shakeend': 'shakestart');
     if(this.player2HP  < 0 ){
       this.player2HP = 0;
       setTimeout(()=>{this.youWon = true;},700);
       clearTimeout(timeout)
     }
     this.turn = !this.turn;
-
   }
 
   computer():void{
@@ -99,20 +129,20 @@ export class PlaygroundComponent implements OnInit {
   compAttack1():void{
     let attackPower = Math.floor((this.compPoke.base.Attack/4));
     this.player1HP = this.player1HP - attackPower;
+    this.states['state2'] = (this.states['state2'] === 'shakestart' ? 'shakeend': 'shakestart');
     if(this.player1HP  < 0 ){
       this.player1HP = 0;
       setTimeout(()=>{this.compWon = true;},700)
     }
-
   }
 
   compAttack2():void{
     let attackPower = this.compPoke.base.Attack - Math.floor((this.compPoke.base.Attack/4));
     this.player1HP = this.player1HP - attackPower;
+    this.states['state2'] = (this.states['state2'] === 'shakestart' ? 'shakeend' : 'shakestart');
     if(this.player1HP  < 0 ){
       this.player1HP = 0;
       setTimeout(()=>{this.compWon = true;},700)
     }
-
   }
 }
