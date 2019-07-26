@@ -54,7 +54,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       state('flyIn', style({ transform: 'translateX(0)' })),
       transition(':enter', [
         style({ transform: 'translateX(-100%)' }),
-        animate('0.3s 2000ms ease-in')
+        animate('0.3s 1500ms ease-in')
       ]),
       transition(':leave', [
         animate('0.2s ease-out', style({ transform: 'translateX(100%)' }))
