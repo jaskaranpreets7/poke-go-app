@@ -13,7 +13,7 @@ h3{
 }
 
 li > a {
-  color: black;
+  color:white
 }
 
 th{
@@ -33,6 +33,19 @@ table{
   box-shadow: 3px 5px rgb(109, 100, 100);
 }
 
-nav> ul>li{
-  border: 1px solid black;
+.page-item :only-child{
+  border: 1px solid #212529;
+  background-color: #212529
+}
+
+.page-item.active .page-link {
+  color:black;
+  background-color: whitesmoke;
+  border-color: #212529;
+ 
+}
+
+.page-item :hover{
+  background-color: grey;
+  color: black !important;
 }

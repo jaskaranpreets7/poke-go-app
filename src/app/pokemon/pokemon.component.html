@@ -25,8 +25,20 @@
   
   <nav aria-label="Page navigation">
     <ul class="pagination pagination-lg justify-content-end">
-      <li class="page-item" *ngFor="let page of maxPages">
+        <li class="page-item" [ngClass]="isPreviousDisable ? 'disabled' : 'null'">
+            <a class="page-link" aria-label="Previous" (click)="onPrevious()" >
+              <span >&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+      <li class="page-item" *ngFor="let page of pages;" [ngClass]="page == currentPage ? 'active' : 'null'">
         <a class="page-link" (click)="pokeList($event.target.innerText)">{{page}}</a>
+      </li>
+      <li class="page-item" [ngClass]="isNextDisable ? 'disabled' : 'null'">
+          <a class="page-link" aria-label="Next" (click)="onNext()">
+            <span >&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
       </li>
     </ul>
   </nav>
