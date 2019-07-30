@@ -552,6 +552,585 @@
           "Speed": 56
         },
         "image" : "/assets/thumbnails/030Nidorina.png"
+      },
+      {
+        "id": 31,
+        "name": {
+          "english": "Nidoqueen"
+        },
+        "type": [
+          "Poison", "Ground"
+        ],
+        "base": {
+          "HP": 90,
+          "Attack": 92,
+          "Defense": 87,
+          "Sp. Attack": 75,
+          "Sp. Defense": 85,
+          "Speed": 76
+        },
+        "image" : "/assets/thumbnails/031Nidoqueen.png"
+      },
+      {
+        "id": 32,
+        "name": {
+          "english": "Nidoran"
+        },
+        "type": [
+          "Poison"
+        ],
+        "base": {
+          "HP": 46,
+          "Attack": 57,
+          "Defense": 40,
+          "Sp. Attack": 40,
+          "Sp. Defense": 40,
+          "Speed": 50
+        },
+        "image" : "/assets/thumbnails/032Nidoran.png"
+      },
+      {
+        "id": 33,
+        "name": {
+          "english": "Nidorino"
+        },
+        "type": [
+          "Poison"
+        ],
+        "base": {
+          "HP": 61,					
+          "Attack": 57,
+          "Defense": 57,
+          "Sp. Attack": 55,
+          "Sp. Defense": 55,
+          "Speed": 65
+        },
+        "image" : "/assets/thumbnails/033Nidorino.png"
+      },
+      {
+        "id": 34,
+        "name": {
+          "english": "Nidoking"
+        },
+        "type": [
+          "Poison", "Ground"
+        ],
+        "base": {
+          "HP": 81,					
+          "Attack": 102,
+          "Defense": 77,
+          "Sp. Attack": 85,
+          "Sp. Defense": 75,
+          "Speed": 85
+        },
+        "image" : "/assets/thumbnails/034Nidoking.png"
+      },
+      {
+        "id": 35,
+        "name": {
+          "english": "Clefairy"
+        },
+        "type": [
+          "Fairy"
+        ],
+        "base": {
+          "HP": 70,					
+          "Attack": 45,
+          "Defense": 48,
+          "Sp. Attack": 60,
+          "Sp. Defense": 65,
+          "Speed": 35
+        },
+        "image" : "/assets/thumbnails/035Clefairy.png"
+      },
+      {
+        "id": 36,
+        "name": {
+          "english": "Clefable"
+        },
+        "type": [
+          "Fairy"
+        ],
+        "base": {
+          "HP": 95,					
+          "Attack": 70,
+          "Defense": 73,
+          "Sp. Attack": 95,
+          "Sp. Defense": 90,
+          "Speed": 60
+        },
+        "image" : "/assets/thumbnails/036Clefable.png"
+      },
+      {
+        "id": 37,
+        "name": {
+          "english": "Vulpix"
+        },
+        "type": [
+          "Fire"
+        ],
+        "base": {
+          "HP": 38,					
+          "Attack": 41,
+          "Defense": 40,
+          "Sp. Attack": 50,
+          "Sp. Defense": 65,
+          "Speed": 65
+        },
+        "image" : "/assets/thumbnails/037Vulpix.png"
+      },
+      {
+        "id": 38,
+        "name": {
+          "english": "Ninetales"
+        },
+        "type": [
+          "Fire"
+        ],
+        "base": {
+          "HP": 73,					
+          "Attack": 76,
+          "Defense": 75,
+          "Sp. Attack": 81,
+          "Sp. Defense": 100,
+          "Speed": 100
+        },
+        "image" : "/assets/thumbnails/038Ninetales.png"
+      },
+      {
+        "id": 39,
+        "name": {
+          "english": "Jigglypuff"
+        },
+        "type": [
+          "Normal","Fairy"
+        ],
+        "base": {
+          "HP": 115,					
+          "Attack": 45,
+          "Defense": 20,
+          "Sp. Attack": 45,
+          "Sp. Defense": 25,
+          "Speed": 20
+        },
+        "image" : "/assets/thumbnails/039Jigglypuff.png"
+      },
+      {
+        "id": 40,
+        "name": {
+          "english": "Wigglytuff"
+        },
+        "type": [
+          "Normal","Fairy"
+        ],
+        "base": {
+          "HP": 140,					
+          "Attack": 70,
+          "Defense": 45,
+          "Sp. Attack": 85,
+          "Sp. Defense": 50,
+          "Speed": 45
+        },
+        "image" : "/assets/thumbnails/040Wigglytuff.png"
+      },
+      {
+        "id": 41,
+        "name": {
+          "english": "Zubat"
+        },
+        "type": [
+          "Poison","Flying"
+        ],
+        "base": {
+          "HP": 40,					
+          "Attack": 45,
+          "Defense": 35,
+          "Sp. Attack": 30,
+          "Sp. Defense": 40,
+          "Speed": 55
+        },
+        "image" : "/assets/thumbnails/041Zubat.png"
+      }
+      ,
+      {
+        "id": 42,
+        "name": {
+          "english": "Golbat"
+        },
+        "type": [
+          "Poison","Flying"
+        ],
+        "base": {
+          "HP": 75,					
+          "Attack": 80,
+          "Defense": 70,
+          "Sp. Attack": 65,
+          "Sp. Defense": 75,
+          "Speed": 90
+        },
+        "image" : "/assets/thumbnails/042Golbat.png"
+      }
+      ,
+      {
+        "id": 43,
+        "name": {
+          "english": "Oddish"
+        },
+        "type": [
+          "Grass","Poison"
+        ],
+        "base": {
+          "HP": 45,					
+          "Attack": 50,
+          "Defense": 55,
+          "Sp. Attack": 75,
+          "Sp. Defense": 65,
+          "Speed": 30
+        },
+        "image" : "/assets/thumbnails/043Oddish.png"
+      },
+      {
+        "id": 44,
+        "name": {
+          "english": "Gloom"
+        },
+        "type": [
+          "Grass","Poison"
+        ],
+        "base": {
+          "HP": 60,					
+          "Attack": 65,
+          "Defense": 70,
+          "Sp. Attack": 85,
+          "Sp. Defense": 75,
+          "Speed": 40
+        },
+        "image" : "/assets/thumbnails/044Gloom.png"
+      },
+      {
+        "id": 45,
+        "name": {
+          "english": "Vileplume"
+        },
+        "type": [
+          "Grass","Poison"
+        ],
+        "base": {
+          "HP": 75,					
+          "Attack": 80,
+          "Defense": 85,
+          "Sp. Attack": 110,
+          "Sp. Defense": 90,
+          "Speed": 50
+        },
+        "image" : "/assets/thumbnails/045Vileplume.png"
+      },
+      {
+        "id": 46,
+        "name": {
+          "english": "Paras"
+        },
+        "type": [
+          "Bug","Grass"
+        ],
+        "base": {
+          "HP": 35,					
+          "Attack": 70,
+          "Defense": 55,
+          "Sp. Attack": 45,
+          "Sp. Defense": 55,
+          "Speed": 25
+        },
+        "image" : "/assets/thumbnails/046Paras.png"
+      },
+      {
+        "id": 47,
+        "name": {
+          "english": "Parasect"
+        },
+        "type": [
+          "Bug","Grass"
+        ],
+        "base": {
+          "HP": 60,					
+          "Attack": 95,
+          "Defense": 80,
+          "Sp. Attack": 60,
+          "Sp. Defense": 80,
+          "Speed": 30
+        },
+        "image" : "/assets/thumbnails/047Parasect.png"
+      },
+      {
+        "id": 48,
+        "name": {
+          "english": "Venonat"
+        },
+        "type": [
+         "Bug","Poison"
+        ],
+        "base": {
+          "HP": 60,					
+          "Attack": 55,
+          "Defense": 50,
+          "Sp. Attack": 40,
+          "Sp. Defense":55,
+          "Speed": 45
+        },
+        "image" : "/assets/thumbnails/048Venonat.png"
+      },
+      {
+        "id": 49,
+        "name": {
+          "english": "Venomoth"
+        },
+        "type": [
+          "Bug","Poison"
+        ],
+        "base": {
+          "HP": 70,					
+          "Attack": 65,
+          "Defense": 60,
+          "Sp. Attack": 90,
+          "Sp. Defense": 75,
+          "Speed": 90
+        },
+        "image" : "/assets/thumbnails/049Venomoth.png"
+      },
+      {
+        "id": 50,
+        "name": {
+          "english": "Diglett"
+        },
+        "type": [
+          "Ground"
+        ],
+        "base": {
+          "HP": 10,					
+          "Attack": 55,
+          "Defense": 25,
+          "Sp. Attack": 35,
+          "Sp. Defense": 45,
+          "Speed": 95
+        },
+        "image" : "/assets/thumbnails/050Diglett.png"
+      },
+      {
+        "id": 51,
+        "name": {
+          "english": "Dugtrio"
+        },
+        "type": [
+          "Ground"
+        ],
+        "base": {
+          "HP": 35,					
+          "Attack": 100,
+          "Defense": 50,
+          "Sp. Attack": 50,
+          "Sp. Defense": 70,
+          "Speed": 120
+        },
+        "image" : "/assets/thumbnails/051Dugtrio.png"
+      },
+
+      {
+        "id": 52,
+        "name": {
+          "english": "Meowth"
+        },
+        "type": [
+          "Normal"
+        ],
+        "base": {
+          "HP": 40,
+          "Attack": 45,
+          "Defense": 35,
+          "Sp. Attack": 40,
+          "Sp. Defense": 40,
+          "Speed": 90
+        },
+        "image" : "/assets/thumbnails/052Meowth.png"
+      },
+      {
+        "id": 53,
+        "name": {
+          "english": "Persian"
+        },
+        "type": [
+          "Normal"
+        ],
+        "base": {
+          "HP": 65,
+          "Attack": 70,
+          "Defense": 60,
+          "Sp. Attack": 65,
+          "Sp. Defense": 65,
+          "Speed": 115
+        },
+        "image" :"/assets/thumbnails/053Persian.png"
+      },
+      {
+        "id": 54,
+        "name": {
+          "english": "Psyduck"
+        },
+        "type": [
+          "Water"
+        ],
+        "base": {
+          "HP": 50,
+          "Attack": 52,
+          "Defense": 48,
+          "Sp. Attack": 65,
+          "Sp. Defense": 50,
+          "Speed": 55
+        },
+        "image" : "/assets/thumbnails/054Psyduck.png"
+      },
+      {
+        "id": 55,
+        "name": {
+          "english": "Golduck"
+        },
+        "type": [
+          "Water"
+        ],
+        "base": {
+          "HP": 80,
+          "Attack": 82,
+          "Defense": 78,
+          "Sp. Attack": 95,
+          "Sp. Defense": 80,
+          "Speed": 85
+        },
+        "image" : "/assets/thumbnails/055Golduck.png"
+      },
+      {
+        "id": 56,
+        "name": {
+          "english": "Mankey"
+        },
+        "type": [
+          "Fighting"
+        ],
+        "base": {
+          "HP": 40,
+          "Attack": 80,
+          "Defense": 35,
+          "Sp. Attack": 35,
+          "Sp. Defense": 45,
+          "Speed": 70
+        },
+        "image" : "/assets/thumbnails/056Mankey.png"
+      },
+      {
+        "id": 57,
+        "name": {
+          "english": "Primeape"
+        },
+        "type": [
+         "Fighting"
+        ],
+        "base": {
+          "HP": 65,
+          "Attack": 105,
+          "Defense": 60,
+          "Sp. Attack": 60,
+          "Sp. Defense": 70,
+          "Speed": 95
+        },
+        "image" : "/assets/thumbnails/057Primeape.png"
+      },
+      {
+        "id": 58,
+        "name": {
+          "english": "Growlithe"
+        },
+        "type": [
+         "Fire"
+        ],
+        "base": {
+          "HP": 55,
+          "Attack": 70,
+          "Defense": 45,
+          "Sp. Attack": 70,
+          "Sp. Defense": 50,
+          "Speed": 60
+        },
+        "image" : "/assets/thumbnails/058Growlithe.png"
+      },
+      {
+        "id": 59,
+        "name": {
+          "english": "Arcanine"
+        },
+        "type": [
+         "Fire"
+        ],
+        "base": {
+          "HP": 90,
+          "Attack": 110,
+          "Defense": 80,
+          "Sp. Attack": 100,
+          "Sp. Defense": 80,
+          "Speed": 95
+        },
+        "image" : "/assets/thumbnails/059Arcanine.png"
+      },
+      {
+        "id": 60,
+        "name": {
+          "english": "Poliwag"
+        },
+        "type": [
+          "Water"
+        ],
+        "base": {
+          "HP": 40,
+          "Attack": 50,
+          "Defense": 40,
+          "Sp. Attack": 40,
+          "Sp. Defense": 40,
+          "Speed": 90
+        },
+        "image" : "/assets/thumbnails/060Poliwag.png"
+      },
+      {
+        "id": 61,
+        "name": {
+          "english": "Poliwhirl"
+        },
+        "type": [
+          "Water"
+        ],
+        "base": {
+          "HP": 65,
+          "Attack": 65,
+          "Defense": 65,
+          "Sp. Attack": 50,
+          "Sp. Defense": 50,
+          "Speed": 90
+        },
+        "image" : "/assets/thumbnails/061Poliwhirl.png"
+      },
+      {
+        "id": 62,
+        "name": {
+          "english": "Poliwrath"
+        },
+        "type": [
+          "Water","Fighting"
+        ],
+        "base": {
+          "HP": 90,
+          "Attack": 95,
+          "Defense": 95,
+          "Sp. Attack": 70,
+          "Sp. Defense": 90,
+          "Speed": 70
+        },
+        "image" : "/assets/thumbnails/062Poliwrath.png"
       }
     
 ]
