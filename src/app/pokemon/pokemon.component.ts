@@ -15,13 +15,13 @@ import { trigger, state, style, transition, animate} from '@angular/animations';
     ]),
     trigger('items', [
       transition(':enter', [  
-        style({opacity: 0, transform: 'translateY(-75%)', offset: 1.0}),
+        style({opacity: 0, transform: 'translateY(-75%)'}),
         animate('0.5s 400ms ease-in')
       ]),
  
       transition(':leave', [
         animate('.3s ease-out', 
-        style({opacity:1, transform: 'translateY(35px)',  offset: 0.3}))
+        style({opacity:1, transform: 'translateY(35px)'}))
       ]),
     ])
   ]
