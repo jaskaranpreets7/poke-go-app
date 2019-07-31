@@ -16,7 +16,7 @@ import { trigger, state, style, transition, animate} from '@angular/animations';
     trigger('items', [
       transition(':enter', [  
         style({opacity: 0, transform: 'translateY(-75%)', offset: 1.0}),
-        animate('0.5s 600ms ease-in')
+        animate('0.5s 400ms ease-in')
       ]),
  
       transition(':leave', [
