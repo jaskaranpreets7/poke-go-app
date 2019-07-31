@@ -1,12 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeService } from './poke.service';
-
+import { trigger, state, style, transition, animate} from '@angular/animations';
 
 @Component({
   selector: 'app-pokemon',
   templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.css']
+  styleUrls: ['./pokemon.component.css'],
+  animations:[
+    trigger('table',[
+      state('void',style({
+        opacity:0,
+      })),
+      transition('* <=> void', animate('1500ms ease-out')),
+    ]),
+    trigger('items', [
+      transition(':enter', [  
+        style({opacity: 0, transform: 'translateY(-75%)', offset: 1.0}),
+        animate('0.5s 600ms ease-in')
+      ]),
+ 
+      transition(':leave', [
+        animate('.3s ease-out', 
+        style({opacity:1, transform: 'translateY(35px)',  offset: 0.3}))
+      ]),
+    ])
+  ]
 })
+
 export class PokemonComponent implements OnInit {
   public poke: any;
   public maxPages : any= {};

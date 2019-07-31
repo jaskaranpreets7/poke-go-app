@@ -1,7 +1,7 @@
 <div class="wrapper" *ngIf="filterList || maxPages">
   <h3 style="text-align: center">List Of Pokemon's</h3>
   <div style="overflow-x:auto;">
-    <table class="table table-hover table-dark ">
+    <table class="table table-hover table-dark " @table>
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -10,8 +10,8 @@
         <th scope="col">Type</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let p of filterList">
+    <tbody >
+      <tr *ngFor="let p of filterList" @items >
         <th scope="row">{{p.id}}</th>
         <td>
           <img id="poke-img" [src]="p.image">
